@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  /* Primary */
+  --color-teal-300: hsl(178, 55%, 61%);
+  --color-teal-600: hsl(179, 81%, 29%);
+  --color-orange-200: hsl(25, 94%, 86%);
+
+  /* Neutral */
+  --color-neutral-0: hsl(0, 0%, 100%);
+  --color-neutral-50: hsl(43, 78%, 98%);
+  --color-neutral-100: hsl(40, 29%, 94%);
+  --color-neutral-200: hsl(26, 11%, 87%);
+  --color-neutral-500: hsl(215, 5%, 54%);
+  --color-neutral-900: hsl(215, 19%, 25%);
+
+  /*Fonts*/
+  --font-body: "Barlow", sans-serif;
+  --font-display: "Fraunces", serif;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
