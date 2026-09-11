@@ -3,7 +3,7 @@ import planaltoImage from "./assets/home/desktop/image-planalto.png";
 import piccolloImage from "./assets/home/desktop/image-piccollo.png";
 import dancheImage from "./assets/home/desktop/image-danche.png";
 
-type Product = {
+export type Product = {
   id: number;
   image: string;
   name: string;
