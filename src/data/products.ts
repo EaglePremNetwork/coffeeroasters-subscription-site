@@ -1,7 +1,7 @@
-import granEsspressoImage from "./assets/home/desktop/image-gran-espresso.png";
-import planaltoImage from "./assets/home/desktop/image-planalto.png";
-import piccolloImage from "./assets/home/desktop/image-piccollo.png";
-import dancheImage from "./assets/home/desktop/image-danche.png";
+import granEsspressoImage from "../assets/home/desktop/image-gran-espresso.png";
+import planaltoImage from "../assets/home/desktop/image-planalto.png";
+import piccolloImage from "../assets/home/desktop/image-piccollo.png";
+import dancheImage from "../assets/home/desktop/image-danche.png";
 
 export type Product = {
   id: number;

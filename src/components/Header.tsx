@@ -1,6 +1,7 @@
-import logoImage from "./assets/shared/desktop/logo.svg";
-import openMenuIcon from "./assets/shared/mobile/icon-hamburger.svg";
-import closeMenuIcon from "./assets/shared/mobile/icon-close.svg";
+import logoImage from "../assets/shared/desktop/logo.svg";
+import openMenuIcon from "../assets/shared/mobile/icon-hamburger.svg";
+import closeMenuIcon from "../assets/shared/mobile/icon-close.svg";
+
 import { useState } from "react";
 
 export default function Header() {
