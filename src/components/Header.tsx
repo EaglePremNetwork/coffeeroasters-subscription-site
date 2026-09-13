@@ -1,4 +1,4 @@
-import logoImage from "../assets/shared/desktop/logo.svg";
+import logoIcon from "../assets/shared/desktop/logo.svg";
 import openMenuIcon from "../assets/shared/mobile/icon-hamburger.svg";
 import closeMenuIcon from "../assets/shared/mobile/icon-close.svg";
 
@@ -11,7 +11,7 @@ export default function Header() {
       <header className="relative z-50 flex items-center justify-between">
         <img
           className="w-40 h-[16.2px] md:w-59.25 md:h-6"
-          src={logoImage}
+          src={logoIcon}
           alt="Coffeeroasters logo"
         />
         {!isMenuOpen ? (
@@ -21,6 +21,7 @@ export default function Header() {
             aria-label="Open menu"
             aria-controls="menu-items"
             aria-expanded={isMenuOpen}
+            className="block md:hidden"
           >
             <img src={openMenuIcon} alt="" />
           </button>
