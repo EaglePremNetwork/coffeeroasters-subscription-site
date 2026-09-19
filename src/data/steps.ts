@@ -1,6 +1,7 @@
 export type Step = {
   id: number;
   name: string;
+  nameMobile?: string;
   description: string;
 };
 
@@ -13,13 +14,14 @@ export const steps: Step[] = [
   },
   {
     id: 2,
-    name: "Choose the frequency",
+    name: "Choose the\nfrequency",
     description:
       "Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.",
   },
   {
     id: 3,
-    name: "Receive and enjoy!",
+    name: "Receive and\nenjoy!",
+    nameMobile: "Receive and enjoy!",
     description:
       "We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.",
   },

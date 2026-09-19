@@ -18,6 +18,10 @@
   /*Fonts*/
   --font-body: "Barlow", sans-serif;
   --font-display: "Fraunces", serif;
+
+  /* Breakpoints */
+  --breakpoint-lg1: 1024px;
+  --breakpoint-lg2: 1440px;
 }
 
 body {
