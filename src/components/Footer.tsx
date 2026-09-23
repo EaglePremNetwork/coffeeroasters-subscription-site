@@ -5,7 +5,7 @@ import logoInstagram from "../assets/shared/desktop/icon-instagram.svg";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center gap-6 bg-neutral-900 px-5 py-10 md:flex-row md:justify-between md:gap-0">
+    <footer className="mt-20 flex flex-col items-center gap-6 overflow-hidden bg-neutral-900 px-5 py-10 md:flex-row md:justify-between md:gap-0 lg:mt-35">
       <img
         className="text-neutral-0 lg: h-[16.2px] lg:h-6"
         src={logoIconWhite}

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@tailwind utilities;
 
 @theme {
   /* Colors */
@@ -15,16 +16,104 @@
   --color-neutral-500: hsl(215, 5%, 54%);
   --color-neutral-900: hsl(215, 19%, 25%);
 
-  /*Fonts*/
+  /* Fonts */
   --font-body: "Barlow", sans-serif;
   --font-display: "Fraunces", serif;
 
   /* Breakpoints */
-  --breakpoint-lg1: 1024px;
-  --breakpoint-lg2: 1440px;
+  --breakpoint-lg2: 90rem;
+
+  /* Spacing */
+  --quality-width-min: 18.75rem;
+  --quality-width-fluid: 31vw;
+  --quality-width-max: 27.8125rem;
+
+  --quality-margin-min: -24.125rem;
+  --quality-margin-fluid: calc(-1.1925rem - 25.48vw);
+  --quality-margin-max: -17.5rem;
+
+  --quality-vertical-min: 2.5rem;
+  --quality-vertical-fluid: calc(-8.59375rem + 17.31vw);
+  --quality-vertical-max: 7rem;
+
+  --quality-horizontal-min: 2.5rem;
+  --quality-horizontal-fluid: calc(-3.64375rem + 9.6vw);
+  --quality-horizontal-max: 5rem;
+
+  --quality-max-w-min: 27.5rem;
+  --quality-max-w-fluid: calc(12.1156rem + 24.03vw);
+  --quality-max-w-max: 33.75rem;
+
+  --quality-img-pr-min: 2.5rem;
+  --quality-img-pr-fluid: calc(-4.423rem + 10.82vw);
+  --quality-img-pr-max: 5.3125rem;
 }
 
 body {
   font-family: var(--font-body);
   font-size: 1rem;
+}
+
+/* Foreground image fluid width */
+@utility quality-img-width {
+  width: clamp(
+    var(--quality-width-min),
+    var(--quality-width-fluid),
+    var(--quality-width-max)
+  );
+}
+
+/* Foreground image right padding (Point-slope form) */
+@utility quality-img-pr {
+  padding-right: clamp(
+    var(--quality-img-pr-min),
+    var(--quality-img-pr-fluid),
+    var(--quality-img-pr-max)
+  );
+}
+
+/* Background container negative top margin (Point-slope form) */
+@utility quality-bg-margin {
+  margin-top: clamp(
+    var(--quality-margin-min),
+    var(--quality-margin-fluid),
+    var(--quality-margin-max)
+  );
+}
+
+/* Background container vertical padding (Point-slope form) */
+@utility quality-bg-vertical-padding {
+  padding-top: clamp(
+    var(--quality-vertical-min),
+    var(--quality-vertical-fluid),
+    var(--quality-vertical-max)
+  );
+  padding-bottom: clamp(
+    var(--quality-vertical-min),
+    var(--quality-vertical-fluid),
+    var(--quality-vertical-max)
+  );
+}
+
+/* Background container horizontal padding (Point-slope form) */
+@utility quality-bg-horizontal-padding {
+  padding-left: clamp(
+    var(--quality-horizontal-min),
+    var(--quality-horizontal-fluid),
+    var(--quality-horizontal-max)
+  );
+  padding-right: clamp(
+    var(--quality-horizontal-min),
+    var(--quality-horizontal-fluid),
+    var(--quality-horizontal-max)
+  );
+}
+
+/* Text container max width (Point-slope form) */
+@utility quality-bg-max-w {
+  max-width: clamp(
+    var(--quality-max-w-min),
+    var(--quality-max-w-fluid),
+    var(--quality-max-w-max)
+  );
 }
