@@ -28,7 +28,10 @@ export default function About() {
           </picture>
           <div className="absolute inset-0 flex flex-col items-center justify-center px-5 py-20 md:items-start md:pl-12 lg:pl-20">
             <div className="flex max-w-75.75 flex-col items-center gap-6 text-center md:max-w-111.25 md:items-start md:text-left">
-              <h1 className="font-display text-[28px] leading-[1.2] font-black tracking-normal text-neutral-50 md:text-[32px] md:leading-[1.4] lg:text-[40px]">
+              <h1
+                tabIndex={-1}
+                className="font-display text-[28px] leading-[1.2] font-black tracking-normal text-neutral-50 md:text-[32px] md:leading-[1.4] lg:text-[40px]"
+              >
                 About Us
               </h1>
               <p className="leading-[1.6] tracking-normal text-neutral-50">
@@ -53,7 +56,7 @@ export default function About() {
             />
           </picture>
 
-          <div className="flex flex-col md:justify-center">
+          <div className="flex flex-col items-center md:justify-center">
             <div className="flex max-w-85.75 flex-col gap-5 text-center md:max-w-94 md:text-left lg:max-w-135">
               <h2 className="font-display text-[28px] leading-[1.2] font-black tracking-normal text-neutral-900 md:text-[40px]">
                 Our commitment

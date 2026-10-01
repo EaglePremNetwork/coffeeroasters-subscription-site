@@ -1,28 +1,6 @@
 @import "tailwindcss";
-@tailwind utilities;
 
-@theme {
-  /* Colors */
-  /* Primary */
-  --color-teal-300: hsl(178, 55%, 61%);
-  --color-teal-600: hsl(179, 81%, 29%);
-  --color-orange-200: hsl(25, 94%, 86%);
-
-  /* Neutral */
-  --color-neutral-0: hsl(0, 0%, 100%);
-  --color-neutral-50: hsl(43, 78%, 98%);
-  --color-neutral-100: hsl(40, 29%, 94%);
-  --color-neutral-200: hsl(26, 11%, 87%);
-  --color-neutral-500: hsl(215, 5%, 54%);
-  --color-neutral-900: hsl(215, 19%, 25%);
-
-  /* Fonts */
-  --font-body: "Barlow", sans-serif;
-  --font-display: "Fraunces", serif;
-
-  /* Breakpoints */
-  --breakpoint-lg2: 90rem;
-
+:root {
   /* Spacing */
   --quality-width-min: 18.75rem;
   --quality-width-fluid: 31vw;
@@ -49,12 +27,35 @@
   --quality-img-pr-max: 5.3125rem;
 }
 
+@theme {
+  /* Colors */
+  /* Primary */
+  --color-teal-300: hsl(178, 55%, 61%);
+  --color-teal-600: hsl(179, 81%, 29%);
+  --color-orange-200: hsl(25, 94%, 86%);
+
+  /* Neutral */
+  --color-neutral-0: hsl(0, 0%, 100%);
+  --color-neutral-50: hsl(43, 78%, 98%);
+  --color-neutral-100: hsl(40, 29%, 94%);
+  --color-neutral-200: hsl(26, 11%, 87%);
+  --color-neutral-500: hsl(215, 5%, 54%);
+  --color-neutral-900: hsl(215, 19%, 25%);
+
+  /* Fonts */
+  --font-body: "Barlow", sans-serif;
+  --font-display: "Fraunces", serif;
+
+  /* Breakpoints */
+  --breakpoint-lg2: 90rem;
+}
+
 body {
   font-family: var(--font-body);
   font-size: 1rem;
 }
 
-/* Foreground image fluid width */
+/* Foreground image width */
 @utility quality-img-width {
   width: clamp(
     var(--quality-width-min),
@@ -63,7 +64,7 @@ body {
   );
 }
 
-/* Foreground image right padding (Point-slope form) */
+/* Foreground image right padding */
 @utility quality-img-pr {
   padding-right: clamp(
     var(--quality-img-pr-min),
@@ -72,7 +73,7 @@ body {
   );
 }
 
-/* Background container negative top margin (Point-slope form) */
+/* Background container negative top margin */
 @utility quality-bg-margin {
   margin-top: clamp(
     var(--quality-margin-min),
@@ -81,7 +82,7 @@ body {
   );
 }
 
-/* Background container vertical padding (Point-slope form) */
+/* Background container vertical padding */
 @utility quality-bg-vertical-padding {
   padding-top: clamp(
     var(--quality-vertical-min),
@@ -95,7 +96,7 @@ body {
   );
 }
 
-/* Background container horizontal padding (Point-slope form) */
+/* Background container horizontal padding */
 @utility quality-bg-horizontal-padding {
   padding-left: clamp(
     var(--quality-horizontal-min),
@@ -109,7 +110,7 @@ body {
   );
 }
 
-/* Text container max width (Point-slope form) */
+/* Text container max width */
 @utility quality-bg-max-w {
   max-width: clamp(
     var(--quality-max-w-min),

@@ -1,12 +1,28 @@
 import type { Step as StepType } from "../../../data/steps";
+import { cva, type VariantProps } from "class-variance-authority";
+
+const stepVariants = cva(
+  "flex flex-col items-center justify-center gap-6 text-center md:items-start md:gap-10 md:text-left",
+  {
+    variants: {
+      variant: {
+        default: "",
+        dark: ["[&_h3]:text-neutral-50", "[&_p]:text-neutral-50"],
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  },
+);
 
 type StepProps = {
   step: StepType;
-};
+} & VariantProps<typeof stepVariants>;
 
-export default function Step({ step }: StepProps) {
+export default function Step({ step, variant }: StepProps) {
   return (
-    <li className="flex flex-col items-center justify-center gap-6 text-center md:items-start md:gap-10 md:text-left">
+    <li className={stepVariants({ variant })}>
       <div className="hidden h-7.75 w-7.75 rounded-full border-2 border-teal-600 bg-neutral-50 md:relative md:block"></div>
 
       <span

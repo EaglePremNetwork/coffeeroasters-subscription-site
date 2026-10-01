@@ -28,7 +28,7 @@ export default function Home() {
           </picture>
           <div className="absolute inset-0 flex flex-col items-center justify-center px-6 py-24 max-[324px]:px-3 md:items-start md:pl-12 lg:py-28 lg:pl-20">
             <div className="flex max-w-73.75 flex-col items-center md:max-w-105 md:items-start lg:max-w-123.25">
-              <h1 className="font-display text-center leading-none font-black tracking-normal text-neutral-50 max-[299px]:text-[36px] min-[300px]:text-[40px] md:text-left md:text-5xl lg:text-7xl">
+              <h1 tabIndex={-1} className="font-display text-center leading-none font-black tracking-normal text-neutral-50 max-[299px]:text-[36px] min-[300px]:text-[40px] md:text-left md:text-5xl lg:text-7xl">
                 Great coffee made simple.
               </h1>
               <p className="mt-8 text-center leading-[1.6] tracking-normal text-neutral-50/80 md:text-left">
