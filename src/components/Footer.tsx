@@ -16,7 +16,10 @@ export default function Footer() {
         src={logoIconWhite}
         alt="Coffeeroasters"
       />
-      <div className="font-display flex gap-5 text-xs leading-[1.3] font-bold tracking-normal text-neutral-500 uppercase max-[374px]:pl-3">
+      <nav
+        aria-label="Footer navigation"
+        className="font-display flex gap-5 text-xs leading-[1.3] font-bold tracking-normal text-neutral-500 uppercase max-[374px]:pl-3"
+      >
         <Link className="hover:text-neutral-0" to="/">
           Home
         </Link>
@@ -26,7 +29,7 @@ export default function Footer() {
         <Link className="hover:text-neutral-0" to="/subscribe">
           Create your plan
         </Link>
-      </div>
+      </nav>
       <div className="flex gap-5">
         <a
           href="https://www.facebook.com"

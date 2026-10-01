@@ -49,7 +49,10 @@ export default function OrderSummary({
           <span className="text-neutral-0/50 text-left leading-[1.6] tracking-normal uppercase">
             Order Summary
           </span>
-          <p className="font-display text-neutral-0 text-2xl leading-normal font-black tracking-normal">
+          <p
+            aria-live="polite"
+            className="font-display text-neutral-0 text-2xl leading-normal font-black tracking-normal"
+          >
             “I drink coffee{" "}
             <span className="text-teal-600">
               {coffeeType?.title ?? "_____"}

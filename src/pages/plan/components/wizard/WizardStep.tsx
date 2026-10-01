@@ -70,7 +70,9 @@ export default function WizardStep({
                       className={`flex flex-col items-start gap-4 rounded-lg px-5 py-5 text-left lg:gap-6 lg:px-6 lg:py-8 ${
                         focusedOption === option.id
                           ? "shadow-[0_0_0_3px_var(--color-neutral-50),0_0_0_6px_var(--color-teal-600)]"
-                          : ""
+                          : isSelected
+                            ? "shadow-[inset_0_0_0_2px_var(--color-neutral-0)]"
+                            : ""
                       } ${
                         isSelected
                           ? "bg-teal-600"
