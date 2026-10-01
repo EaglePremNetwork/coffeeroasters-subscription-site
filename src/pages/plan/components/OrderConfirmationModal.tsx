@@ -163,7 +163,7 @@ export default function OrderConfirmationModal({
 
           <h1
             id="order-confirmation-title"
-            className="font-display text-neutral-0 absolute inset-0 flex items-center px-4 py-6 text-[28px] leading-[1.2] font-black tracking-normal md:text-[40px]"
+            className="font-display text-neutral-0 absolute inset-0 flex items-center px-4 py-6 text-[28px] leading-[1.2] font-black tracking-normal md:px-12 md:py-10 md:text-[40px]"
           >
             Order Summary
           </h1>
