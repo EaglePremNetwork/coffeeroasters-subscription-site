@@ -12,7 +12,7 @@ export default function WizardNav({
   onStepChange,
 }: WizardNavProps) {
   return (
-    <nav>
+    <nav aria-label="Plan steps">
       <ol className="font-display flex flex-col items-start gap-5 text-2xl leading-normal font-black tracking-normal">
         {steps.map((step) => {
           return (
