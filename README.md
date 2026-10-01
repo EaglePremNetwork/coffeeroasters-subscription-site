@@ -54,4 +54,4 @@ I want to continue improving my approach to responsive design and accessibility,
 
 ## Acknowledgements
 
-- [Frontend Mentor](https://www.frontendmentor.io/profile/EaglePremNetwork) — Challenge and design reference.
+- [Frontend Mentor](https://www.frontendmentor.io/challenges/coffeeroasters-subscription-site-5Fc26HVY6) — Challenge and design reference.
