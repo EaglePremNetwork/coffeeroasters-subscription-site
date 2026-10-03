@@ -30,9 +30,15 @@ export default function OrderSummary({
   const grind = getSelectedOption(questions, selections, 4);
   const frequency = getSelectedOption(questions, selections, 5);
 
-  const isComplete = questions.every(
-    (question) => selections[question.id] !== undefined,
-  );
+  const isCapsule = coffeeType?.id === "capsule";
+
+  const isComplete = questions.every((question) => {
+    if (isCapsule && question.id === 4) {
+      return true;
+    }
+
+    return selections[question.id] !== undefined;
+  });
 
   return (
     <section>
@@ -53,18 +59,42 @@ export default function OrderSummary({
             aria-live="polite"
             className="font-display text-neutral-0 text-2xl leading-normal font-black tracking-normal"
           >
-            “I drink coffee{" "}
-            <span className="text-teal-600">
-              {coffeeType?.title ?? "_____"}
-            </span>
-            , with a{" "}
+            “I drink my coffee{" "}
+            {isCapsule ? (
+              <>
+                <span className="text-teal-600">using Capsules</span>, with
+                a{" "}
+              </>
+            ) : (
+              <>
+                as{" "}
+                <span className="text-teal-600">
+                  {coffeeType?.title ?? "_____"}
+                </span>
+                , with a{" "}
+              </>
+            )}
             <span className="text-teal-600">{beanType?.title ?? "_____"}</span>{" "}
             type of bean.{" "}
-            <span className="text-teal-600">{quantity?.title ?? "_____"}</span>{" "}
-            ground ala{" "}
-            <span className="text-teal-600">{grind?.title ?? "_____"}</span>,
-            sent to me{" "}
-            <span className="text-teal-600">{frequency?.title ?? "_____"}</span>
+            <span className="text-teal-600">{quantity?.title ?? "_____"}</span>
+            {isCapsule ? (
+              <>
+                , sent to me{" "}
+                <span className="text-teal-600">
+                  {frequency?.title ?? "_____"}
+                </span>
+              </>
+            ) : (
+              <>
+                {" "}
+                ground ala{" "}
+                <span className="text-teal-600">{grind?.title ?? "_____"}</span>
+                , sent to me{" "}
+                <span className="text-teal-600">
+                  {frequency?.title ?? "_____"}
+                </span>
+              </>
+            )}
             .”
           </p>
         </div>

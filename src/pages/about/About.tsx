@@ -18,11 +18,23 @@ export default function About() {
       <section>
         <div className="relative flex flex-col items-center overflow-hidden">
           <picture>
-            <source media="(min-width: 1024px)" srcSet={heroDeskImage} />
-            <source media="(min-width: 768px)" srcSet={heroTabImage} />
+            <source
+              media="(min-width: 1024px)"
+              srcSet={heroDeskImage}
+              width="1280"
+              height="450"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcSet={heroTabImage}
+              width="1378"
+              height="800"
+            />
             <img
               className="w-full rounded-[10px] max-[374px]:h-90"
               src={heroMobImage}
+              width="654"
+              height="800"
               alt=""
             />
           </picture>
@@ -47,11 +59,23 @@ export default function About() {
       <section>
         <div className="lg2:gap-31.25 lg2:px-21.25 flex flex-col gap-12 md:flex-row md:justify-center lg:items-center lg:gap-16 lg:px-10">
           <picture>
-            <source media="(min-width: 1024px)" srcSet={commitmentDeskImage} />
-            <source media="(min-width: 768px)" srcSet={commitmentTabImage} />
+            <source
+              media="(min-width: 1024px)"
+              srcSet={commitmentDeskImage}
+              width="445"
+              height="520"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcSet={commitmentTabImage}
+              width="281"
+              height="470"
+            />
             <img
               className="w-full rounded-[10px]"
               src={commitmentMobImage}
+              width="654"
+              height="800"
               alt=""
             />
           </picture>
@@ -83,11 +107,23 @@ export default function About() {
         <div className="relative">
           <div className="lg:quality-img-pr relative z-10 px-8 md:px-16.5">
             <picture>
-              <source media="(min-width: 1024px)" srcSet={QualityDeskImage} />
-              <source media="(min-width: 768px)" srcSet={QualityTabImage} />
+              <source
+                media="(min-width: 1024px)"
+                srcSet={QualityDeskImage}
+                width="445"
+                height="474"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcSet={QualityTabImage}
+                width="573"
+                height="320"
+              />
               <img
                 className="lg:quality-img-width w-full rounded-[10px] lg:ml-auto"
                 src={QualityMobImage}
+                width="558"
+                height="312"
                 alt=""
               />
             </picture>

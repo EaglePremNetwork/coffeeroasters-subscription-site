@@ -171,13 +171,48 @@ export default function OrderConfirmationModal({
         <div className="flex flex-col gap-8 bg-neutral-50 px-4 py-6 md:gap-12 md:px-12 md:py-12">
           <div className="flex flex-col gap-5">
             <p className="font-display text-2xl leading-normal font-black tracking-normal text-neutral-500">
-              “I drink coffee{" "}
-              <span className="text-teal-600">{coffeeType?.title}</span>, with a{" "}
-              <span className="text-teal-600">{beanType?.title}</span> type of
-              bean. <span className="text-teal-600">{quantity?.title}</span>{" "}
-              ground ala <span className="text-teal-600">{grind?.title}</span>,
-              sent to me{" "}
-              <span className="text-teal-600">{frequency?.title}</span>
+              “I drink my coffee{" "}
+              {coffeeType?.id === "capsule" ? (
+                <>
+                  <span className="text-teal-600">using Capsules</span>, with
+                  a{" "}
+                </>
+              ) : (
+                <>
+                  as{" "}
+                  <span className="text-teal-600">
+                    {coffeeType?.title ?? "_____"}
+                  </span>
+                  , with a{" "}
+                </>
+              )}
+              <span className="text-teal-600">
+                {beanType?.title ?? "_____"}
+              </span>{" "}
+              type of bean.{" "}
+              <span className="text-teal-600">
+                {quantity?.title ?? "_____"}
+              </span>
+              {coffeeType?.id === "capsule" ? (
+                <>
+                  , sent to me{" "}
+                  <span className="text-teal-600">
+                    {frequency?.title ?? "_____"}
+                  </span>
+                </>
+              ) : (
+                <>
+                  {" "}
+                  ground ala{" "}
+                  <span className="text-teal-600">
+                    {grind?.title ?? "_____"}
+                  </span>
+                  , sent to me{" "}
+                  <span className="text-teal-600">
+                    {frequency?.title ?? "_____"}
+                  </span>
+                </>
+              )}
               .”
             </p>
 

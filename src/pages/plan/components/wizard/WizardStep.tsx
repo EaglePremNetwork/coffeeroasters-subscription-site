@@ -10,6 +10,7 @@ type WizardStepProps = {
   onStepChange: (step: number) => void;
   selections: Record<number, string>;
   onOptionSelect: (questionId: number, optionId: string) => void;
+  isCapsule: boolean;
 };
 
 export default function WizardStep({
@@ -18,6 +19,7 @@ export default function WizardStep({
   onStepChange,
   selections,
   onOptionSelect,
+  isCapsule,
 }: WizardStepProps) {
   const [focusedOption, setFocusedOption] = useState<string | null>(null);
 
@@ -29,25 +31,28 @@ export default function WizardStep({
         return (
           <section key={question.id} className="flex flex-col gap-6">
             <div className="flex items-center justify-between gap-4">
-              <h2
-                id={`question-${question.id}`}
-                className="font-display text-[28px] leading-[1.2] font-black tracking-normal text-neutral-500"
-              >
-                {question.question}
-              </h2>
-
               <button
                 type="button"
+                disabled={isCapsule && question.id === 4}
+                aria-disabled={isCapsule && question.id === 4}
                 onClick={() => onStepChange(question.id)}
-                aria-label={question.question}
                 aria-expanded={isOpen}
                 aria-controls={`wizard-options-${question.id}`}
-                className="flex h-[11.92px] w-[18.19px] shrink-0 items-center justify-center"
+                className="flex w-full items-center justify-between gap-4 py-2 text-left"
               >
+                <h2
+                  id={`question-${question.id}`}
+                  className="font-display text-[28px] leading-[1.2] font-black tracking-normal text-neutral-500"
+                >
+                  {question.question}
+                </h2>
+
                 <img
                   src={arrowIcon}
                   alt=""
-                  className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                  className={`h-[11.92px] w-[18.19px] shrink-0 transition-transform duration-200 ${
+                    isOpen ? "rotate-180" : ""
+                  }`}
                 />
               </button>
             </div>

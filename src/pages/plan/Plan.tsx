@@ -23,11 +23,22 @@ export default function Plan() {
 
   const modalTriggerRef = useRef<HTMLButtonElement | null>(null);
 
+  const isCapsule = selections[1] === "capsule";
+
   const handleOptionSelect = (questionId: number, optionId: string) => {
-    setSelections((current) => ({
-      ...current,
-      [questionId]: optionId,
-    }));
+    setSelections((current) => {
+      const next = {
+        ...current,
+        [questionId]: optionId,
+      };
+
+      if (questionId === 1 && optionId === "capsule") {
+        delete next[4];
+        setOpenStep((currentStep) => (currentStep === 4 ? 1 : currentStep));
+      }
+
+      return next;
+    });
   };
 
   useEffect(() => {
@@ -47,11 +58,23 @@ export default function Plan() {
       <section>
         <div className="relative">
           <picture>
-            <source media="(min-width: 1024px)" srcSet={heroBlackcupDeskImg} />
-            <source media="(min-width: 768px)" srcSet={heroBlackcupTabImg} />
+            <source
+              media="(min-width: 1024px)"
+              srcSet={heroBlackcupDeskImg}
+              width="1280"
+              height="450"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcSet={heroBlackcupTabImg}
+              width="1378"
+              height="800"
+            />
             <img
               className="w-full rounded-[10px]"
               src={heroBlackcupMobImg}
+              width="654"
+              height="800"
               alt=""
             />
           </picture>
@@ -101,6 +124,7 @@ export default function Plan() {
               steps={wizardNavSteps}
               openStep={openStep}
               onStepChange={setOpenStep}
+              isCapsule={isCapsule}
             />
           </div>
           <div className="flex flex-col gap-16 lg:gap-20">
@@ -110,6 +134,7 @@ export default function Plan() {
               onStepChange={setOpenStep}
               selections={selections}
               onOptionSelect={handleOptionSelect}
+              isCapsule={isCapsule}
             />
             <OrderSummary
               questions={wizardQuestions}
