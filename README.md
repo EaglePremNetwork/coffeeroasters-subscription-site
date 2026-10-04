@@ -36,19 +36,18 @@ I want to continue improving my approach to responsive design and accessibility,
 
 <div align="center">
 
-![Coffeeroasters Subscription Site 1](https://github.com/user-attachments/assets/97ed3172-89e3-422d-a693-81f947eba3c3)
-
-![Coffeeroasters Subscription Site 2](https://github.com/user-attachments/assets/c9c31d53-0913-4a62-a8f7-126f60d399e2)
-![Coffeeroasters Subscription Site 3](https://github.com/user-attachments/assets/95fd1d53-d662-42c0-9751-271ad1391ab7)
-![Coffeeroasters Subscription Site 4](https://github.com/user-attachments/assets/d43990da-de58-48c7-9863-f83cf09a57d8)
-![Coffeeroasters Subscription Site 5](https://github.com/user-attachments/assets/822bc2ad-71be-4b4c-9723-652a137a4a50)
-![Coffeeroasters Subscription Site 6](https://github.com/user-attachments/assets/7a99b8bc-3e32-4010-891a-a32c1a618b26)
-![Coffeeroasters Subscription Site 7](https://github.com/user-attachments/assets/c602dd56-836d-4be3-8a57-25b78269531c)
-![Coffeeroasters Subscription Site 8](https://github.com/user-attachments/assets/45c0d127-3810-4d5b-b718-48b646e83e60)
-![Coffeeroasters Subscription Site 9](https://github.com/user-attachments/assets/aac834d4-2770-4255-bf0e-90ee097a2e98)
-![Coffeeroasters Subscription Site 10](https://github.com/user-attachments/assets/bc4dd7d8-aa4a-45be-922b-9a03bfe7f4df)
-![Coffeeroasters Subscription Site 11](https://github.com/user-attachments/assets/2136da5a-3266-4dfa-810b-ab614ed97ef1)
-![Coffeeroasters Subscription Site 12](https://github.com/user-attachments/assets/14e43a4a-242b-4230-aabf-794e7f1ffaa6)
+![Coffeeroasters Subscription Site 1](https://github.com/user-attachments/assets/80875011-e918-4e85-9378-8ac08667ac89)
+![Coffeeroasters Subscription Site 2](https://github.com/user-attachments/assets/2088df87-b8b1-4082-83e0-eca027987c4e)
+![Coffeeroasters Subscription Site 3](https://github.com/user-attachments/assets/13279aa7-89c6-4462-890b-ae82b3c80a9e)
+![Coffeeroasters Subscription Site 4](https://github.com/user-attachments/assets/ab4c19ef-99cd-4b01-ba6f-41f55662f84b)
+![Coffeeroasters Subscription Site 5](https://github.com/user-attachments/assets/fa9d92b7-c69e-4e7a-858b-7d8c90678d63)
+![Coffeeroasters Subscription Site 6](https://github.com/user-attachments/assets/78103d09-741a-40d0-bf9f-73efb2916c12)
+![Coffeeroasters Subscription Site 7](https://github.com/user-attachments/assets/f4f5a69a-343e-4265-bd10-cd4eda12aa15)
+![Coffeeroasters Subscription Site 8](https://github.com/user-attachments/assets/19cf94b0-2284-4b45-b3c1-8b4c036fab7f)
+![Coffeeroasters Subscription Site 9](https://github.com/user-attachments/assets/988fdc99-8e6b-4b6a-81c3-970b91c504ff)
+![Coffeeroasters Subscription Site 10](https://github.com/user-attachments/assets/6a8ff63e-15ad-4854-ba3e-9ba09cecaad6)
+![Coffeeroasters Subscription Site 11](https://github.com/user-attachments/assets/52d906c3-9be1-4684-a685-df15631714da)
+![Coffeeroasters Subscription Site 12](https://github.com/user-attachments/assets/9762d8ef-5ad8-4a73-a83b-7d0dc86f134a)
 
 </div>
 
