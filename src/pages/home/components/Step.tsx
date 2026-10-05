@@ -23,7 +23,7 @@ type StepProps = {
 export default function Step({ step, variant }: StepProps) {
   return (
     <li className={stepVariants({ variant })}>
-      <div className="hidden h-7.75 w-7.75 rounded-full border-2 border-teal-600 bg-neutral-50 md:relative md:block"></div>
+      <div className="hidden h-7.75 w-7.75 rounded-full border-2 border-teal-600 md:relative md:block"></div>
 
       <span
         aria-hidden="true"
