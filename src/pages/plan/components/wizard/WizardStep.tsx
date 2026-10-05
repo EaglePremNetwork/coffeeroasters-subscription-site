@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import arrowIcon from "../../../../assets/plan/desktop/icon-arrow.svg";
 
+import { shipmentPrices } from "../../../../data/shipmentPrices";
 import type { WizardQuestion } from "../../../../data/wizardQuestions";
 
 type WizardStepProps = {
@@ -27,6 +28,7 @@ export default function WizardStep({
     <div className="flex flex-col gap-8">
       {questions.map((question) => {
         const isOpen = openStep === question.id;
+        const selectedQuantity = selections[3];
 
         return (
           <section key={question.id} className="flex flex-col gap-6">
@@ -38,7 +40,7 @@ export default function WizardStep({
                 onClick={() => onStepChange(question.id)}
                 aria-expanded={isOpen}
                 aria-controls={`wizard-options-${question.id}`}
-                className="flex w-full items-center justify-between gap-4 py-2 text-left"
+                className="flex w-full items-center justify-between gap-4 py-2 text-left hover:opacity-70"
               >
                 <h2
                   id={`question-${question.id}`}
@@ -66,6 +68,10 @@ export default function WizardStep({
               >
                 {question.options.map((option) => {
                   const isSelected = selections[question.id] === option.id;
+                  const price =
+                    question.id === 5 && selectedQuantity
+                      ? shipmentPrices[selectedQuantity]?.[option.title]
+                      : undefined;
 
                   return (
                     <label
@@ -102,7 +108,12 @@ export default function WizardStep({
                       <p
                         className={`leading-[1.6] tracking-normal ${isSelected ? "text-neutral-50" : "text-neutral-900"}`}
                       >
-                        {option.description}
+                        {question.id === 5 && price !== undefined
+                          ? option.description.replace(
+                              /\$[\d.]+/,
+                              `$${price.toFixed(2)}`,
+                            )
+                          : option.description}
                       </p>
                     </label>
                   );

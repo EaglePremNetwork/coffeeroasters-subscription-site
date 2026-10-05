@@ -2,6 +2,8 @@ import { useEffect, useRef } from "react";
 
 import bgModalTopImg from "../../../assets/plan/desktop/bg-modal-top.png";
 
+import OrderSummaryText from "./OrderSummaryText";
+import { shipmentPrices } from "../../../data/shipmentPrices";
 import type { WizardQuestion } from "../../../data/wizardQuestions";
 import { getSelectedOption } from "../../../utils/wizard";
 import Button from "../../../components/Button";
@@ -16,24 +18,6 @@ type OrderConfirmationModalProps = {
   questions: WizardQuestion[];
   selections: OrderSelection;
   triggerRef: React.RefObject<HTMLButtonElement | null>;
-};
-
-const shipmentPrices: Record<string, Record<string, number>> = {
-  "250g": {
-    "Every week": 7.2,
-    "Every 2 weeks": 9.6,
-    "Every month": 12,
-  },
-  "500g": {
-    "Every week": 13,
-    "Every 2 weeks": 17.5,
-    "Every month": 22,
-  },
-  "1000g": {
-    "Every week": 22,
-    "Every 2 weeks": 32,
-    "Every month": 42,
-  },
 };
 
 const shipmentsPerMonth: Record<string, number> = {
@@ -125,10 +109,7 @@ export default function OrderConfirmationModal({
     return null;
   }
 
-  const coffeeType = getSelectedOption(questions, selections, 1);
-  const beanType = getSelectedOption(questions, selections, 2);
   const quantity = getSelectedOption(questions, selections, 3);
-  const grind = getSelectedOption(questions, selections, 4);
   const frequency = getSelectedOption(questions, selections, 5);
 
   const selectedQuantity = quantity?.title;
@@ -171,49 +152,7 @@ export default function OrderConfirmationModal({
         <div className="flex flex-col gap-8 bg-neutral-50 px-4 py-6 md:gap-12 md:px-12 md:py-12">
           <div className="flex flex-col gap-5">
             <p className="font-display text-2xl leading-normal font-black tracking-normal text-neutral-500">
-              “I drink my coffee{" "}
-              {coffeeType?.id === "capsule" ? (
-                <>
-                  <span className="text-teal-600">using Capsules</span>, with
-                  a{" "}
-                </>
-              ) : (
-                <>
-                  as{" "}
-                  <span className="text-teal-600">
-                    {coffeeType?.title ?? "_____"}
-                  </span>
-                  , with a{" "}
-                </>
-              )}
-              <span className="text-teal-600">
-                {beanType?.title ?? "_____"}
-              </span>{" "}
-              type of bean.{" "}
-              <span className="text-teal-600">
-                {quantity?.title ?? "_____"}
-              </span>
-              {coffeeType?.id === "capsule" ? (
-                <>
-                  , sent to me{" "}
-                  <span className="text-teal-600">
-                    {frequency?.title ?? "_____"}
-                  </span>
-                </>
-              ) : (
-                <>
-                  {" "}
-                  ground ala{" "}
-                  <span className="text-teal-600">
-                    {grind?.title ?? "_____"}
-                  </span>
-                  , sent to me{" "}
-                  <span className="text-teal-600">
-                    {frequency?.title ?? "_____"}
-                  </span>
-                </>
-              )}
-              .”
+              <OrderSummaryText questions={questions} selections={selections} />
             </p>
 
             <p className="leading-[1.6] text-neutral-900">

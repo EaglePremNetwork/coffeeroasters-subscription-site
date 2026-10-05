@@ -1,3 +1,5 @@
+import { shipmentPrices } from "./shipmentPrices";
+
 export type WizardOption = {
   id: string;
   title: string;
@@ -112,17 +114,17 @@ export const wizardQuestions: WizardQuestion[] = [
       {
         id: "weekly",
         title: "Every week",
-        description: "$14.00 per shipment. Includes free first-class shipping.",
+        description: `$${shipmentPrices["250g"]["Every week"].toFixed(2)} per shipment. Includes free first-class shipping.`,
       },
       {
         id: "biweekly",
         title: "Every 2 weeks",
-        description: "$17.25 per shipment. Includes free priority shipping.",
+        description: `$${shipmentPrices["250g"]["Every 2 weeks"].toFixed(2)} per shipment. Includes free priority shipping.`,
       },
       {
         id: "monthly",
         title: "Every month",
-        description: "$22.50 per shipment. Includes free priority shipping.",
+        description: `$${shipmentPrices["250g"]["Every month"].toFixed(2)} per shipment. Includes free priority shipping.`,
       },
     ],
   },

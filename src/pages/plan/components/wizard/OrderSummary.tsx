@@ -3,6 +3,7 @@ import type { RefObject } from "react";
 import bgOrderSummaryDeskImg from "../../../../assets/plan/desktop/bg-order-summary.png";
 import bgOrderSummaryMobImg from "../../../../assets/plan/mobile/bg-order-summary.png";
 
+import OrderSummaryText from "../OrderSummaryText";
 import type { WizardQuestion } from "../../../../data/wizardQuestions";
 import { getSelectedOption } from "../../../../utils/wizard";
 import Button from "../../../../components/Button";
@@ -25,10 +26,6 @@ export default function OrderSummary({
   onCreatePlan,
 }: OrderSummaryProps) {
   const coffeeType = getSelectedOption(questions, selections, 1);
-  const beanType = getSelectedOption(questions, selections, 2);
-  const quantity = getSelectedOption(questions, selections, 3);
-  const grind = getSelectedOption(questions, selections, 4);
-  const frequency = getSelectedOption(questions, selections, 5);
 
   const isCapsule = coffeeType?.id === "capsule";
 
@@ -59,43 +56,7 @@ export default function OrderSummary({
             aria-live="polite"
             className="font-display text-neutral-0 text-2xl leading-normal font-black tracking-normal"
           >
-            “I drink my coffee{" "}
-            {isCapsule ? (
-              <>
-                <span className="text-teal-600">using Capsules</span>, with
-                a{" "}
-              </>
-            ) : (
-              <>
-                as{" "}
-                <span className="text-teal-600">
-                  {coffeeType?.title ?? "_____"}
-                </span>
-                , with a{" "}
-              </>
-            )}
-            <span className="text-teal-600">{beanType?.title ?? "_____"}</span>{" "}
-            type of bean.{" "}
-            <span className="text-teal-600">{quantity?.title ?? "_____"}</span>
-            {isCapsule ? (
-              <>
-                , sent to me{" "}
-                <span className="text-teal-600">
-                  {frequency?.title ?? "_____"}
-                </span>
-              </>
-            ) : (
-              <>
-                {" "}
-                ground ala{" "}
-                <span className="text-teal-600">{grind?.title ?? "_____"}</span>
-                , sent to me{" "}
-                <span className="text-teal-600">
-                  {frequency?.title ?? "_____"}
-                </span>
-              </>
-            )}
-            .”
+            <OrderSummaryText questions={questions} selections={selections} />
           </p>
         </div>
       </div>
