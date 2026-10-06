@@ -26,19 +26,24 @@ export default function Plan() {
   const isCapsule = selections[1] === "capsule";
 
   const handleOptionSelect = (questionId: number, optionId: string) => {
+    const clearsGrind = questionId === 1 && optionId === "capsule";
+
     setSelections((current) => {
       const next = {
         ...current,
         [questionId]: optionId,
       };
 
-      if (questionId === 1 && optionId === "capsule") {
+      if (clearsGrind) {
         delete next[4];
-        setOpenStep((currentStep) => (currentStep === 4 ? 1 : currentStep));
       }
 
       return next;
     });
+
+    if (clearsGrind && openStep === 4) {
+      setOpenStep(1);
+    }
   };
 
   useEffect(() => {

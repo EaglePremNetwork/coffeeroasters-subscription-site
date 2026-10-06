@@ -142,12 +142,12 @@ export default function OrderConfirmationModal({
             className="h-20.5 w-full object-cover md:h-34"
           />
 
-          <h1
+          <h2
             id="order-confirmation-title"
             className="font-display text-neutral-0 absolute inset-0 flex items-center px-4 py-6 text-[28px] leading-[1.2] font-black tracking-normal md:px-12 md:py-10 md:text-[40px]"
           >
             Order Summary
-          </h1>
+          </h2>
         </div>
         <div className="flex flex-col gap-8 bg-neutral-50 px-4 py-6 md:gap-12 md:px-12 md:py-12">
           <div className="flex flex-col gap-5">

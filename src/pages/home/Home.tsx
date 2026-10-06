@@ -1,7 +1,9 @@
 import heroImageDesk from "../../assets/home/desktop/image-hero-coffeepress.jpg";
 import heroImageTab from "../../assets/home/tablet/image-hero-coffeepress.jpg";
 import heroImageMob from "../../assets/home/mobile/image-hero-coffeepress.jpg";
-import bgQualityImage from "../../assets/about/desktop/bg-quality.png";
+import bgQualityMobImage from "../../assets/about/mobile/bg-quality.png";
+import bgQualityTabImage from "../../assets/about/tablet/bg-quality.png";
+import bgQualityDeskImage from "../../assets/about/desktop/bg-quality.png";
 
 import Button from "../../components/Button";
 import Product from "../../components/Product";
@@ -84,11 +86,16 @@ export default function Home() {
       </section>
 
       <section className="relative">
-        <img
-          className="absolute inset-x-0 top-0 h-144.25 rounded-[10px] object-cover"
-          src={bgQualityImage}
-          alt=""
-        />
+        <picture>
+          <source media="(min-width: 1024px)" srcSet={bgQualityDeskImage} />
+          <source media="(min-width: 768px)" srcSet={bgQualityTabImage} />
+          <img
+            className="absolute inset-x-0 top-0 h-144.25 w-full rounded-[10px] object-cover"
+            src={bgQualityMobImage}
+            alt=""
+          />
+        </picture>
+
         <div className="lg2:px-4 relative px-4 pt-16 lg:px-0 lg:pt-24">
           <div className="lg:flex lg:flex-col lg:items-center">
             <div className="lg2:px-92.5 flex flex-col gap-8 md:px-20.5 lg:max-w-7xl">

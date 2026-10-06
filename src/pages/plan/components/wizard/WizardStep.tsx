@@ -32,22 +32,19 @@ export default function WizardStep({
 
         return (
           <section key={question.id} className="flex flex-col gap-6">
-            <div className="flex items-center justify-between gap-4">
+            <h2
+              id={`question-${question.id}`}
+              className="font-display text-[28px] leading-[1.2] font-black tracking-normal text-neutral-500"
+            >
               <button
                 type="button"
                 disabled={isCapsule && question.id === 4}
-                aria-disabled={isCapsule && question.id === 4}
                 onClick={() => onStepChange(question.id)}
                 aria-expanded={isOpen}
                 aria-controls={`wizard-options-${question.id}`}
                 className="flex w-full items-center justify-between gap-4 py-2 text-left hover:opacity-70"
               >
-                <h2
-                  id={`question-${question.id}`}
-                  className="font-display text-[28px] leading-[1.2] font-black tracking-normal text-neutral-500"
-                >
-                  {question.question}
-                </h2>
+                {question.question}
 
                 <img
                   src={arrowIcon}
@@ -57,7 +54,7 @@ export default function WizardStep({
                   }`}
                 />
               </button>
-            </div>
+            </h2>
 
             {isOpen && (
               <div
